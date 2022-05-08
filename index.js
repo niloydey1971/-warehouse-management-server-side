@@ -34,8 +34,8 @@ async function run() {
             const email = req.query.email
             const query = { email: email }
             const cursor = database.find(query)
-            const result = await cursor.toArray()
-            res.send(result)
+            const filter = await cursor.toArray()
+            res.send(filter)
         })
 
         // get data via params
