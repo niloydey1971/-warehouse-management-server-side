@@ -5,11 +5,10 @@ var cors = require('cors')
 const app = express()
 app.use(cors())
 app.use(express.json())
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 // Database connection
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
 const uri = "mongodb+srv://carmoto22:UEaKVilSCO00iQGO@cluster0.2asyc.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 
@@ -96,5 +95,5 @@ app.get('/', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log("Listening port 5000")
+    console.log("Listening port 4000")
 })
