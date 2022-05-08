@@ -30,7 +30,7 @@ async function run() {
         })
 
         // get data by  Query..........
-        app.get('/myproduct', async (req, res) => {
+        app.get('/myitem', async (req, res) => {
             const email = req.query.email
             const query = { email: email }
             const cursor = database.find(query)
